@@ -3,9 +3,12 @@ import CallsTable from "./CallsTable";
 
 const getcallsdata = async () => {
   try {
-    const res = await fetch(`http://localhost:3000/api/calls`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `https://nextjs-mongodb-virid.vercel.app/api/calls`,
+      {
+        cache: "no-store",
+      }
+    );
     return res.json();
   } catch (error) {
     console.error(error);
